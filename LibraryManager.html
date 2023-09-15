@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> A Book Manager</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: powderblue;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        fieldset {
+            background-color: cornflowerblue;
+            width:500px;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .input-group label {
+            width: 150px;
+            margin-right: 1rem;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button.button-hover {
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        button.button-hover:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            padding: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>A BOOK MANAGER</h1>
+    </header>
+    <script src="bookclass.js"></script>
+
+    <fieldset>
+        <form>
+            <div class="input-group">
+                <label for="title">Book Title:</label>
+                <input type="text" name="title" id="title" size="40">
+            </div>
+            <div class="input-group">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author" size="40">
+            </div>
+            <div class="input-group">
+                <label for="pubyear">Publication Year:</label>
+                <input type="text" name="pubyear" id="pubyear" size="40">
+            </div>
+            <div class="input-group">
+                <button type="button" onclick="addNewBook()" class="button-hover"> Submit the Book </button>
+            </div>
+        </form>
+    </fieldset>
+
+    <div>
+        <h2>Books List:</h2>
+        <ul id="bookList">
+            <!-- This is where the books will be listed -->
+        </ul>
+    </div>
+</body>
+
+</html>
